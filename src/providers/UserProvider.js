@@ -14,6 +14,11 @@ class UserProvider extends React.Component {
     position:"Software Developer", 
     company:"Adobe",
     experience:"Junior",
+    updateUser: (user) => this.updateUser(user)
+  }
+
+  updateUser = (user) => {
+    this.setState({...user,})
   }
 
   render(){
