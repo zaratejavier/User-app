@@ -2,7 +2,7 @@ import React from "react"
 import { Form } from "semantic-ui-react"
 
 class UserForm extends React.Component{
-  state = {firstName: "", lastName:"", position:"", experience:""}
+  state = {firstName: "", lastName:"", position:"", company:"", experience:""}
 
   handleChange = (e, {name, value}) => {
   this.setState({[name]: value}) //this will pass the info we put in to the state to store it
@@ -13,7 +13,7 @@ class UserForm extends React.Component{
   }
 
   render() {
-    const {firstName, lastName, position, experience} = this.state //this just destructs the items from the state
+    const {firstName, lastName, position, experience, company} = this.state //this just destructs the items from the state
     return(
       <>
       <h1>{this.props.formLabel}</h1>
@@ -47,6 +47,14 @@ class UserForm extends React.Component{
           type="text"
           name="experience"
           value={experience}
+          onChange={this.handleChange}
+        />
+
+        <Form.Input 
+          label="Company"
+          type="text"
+          name="conpany"
+          value={company}
           onChange={this.handleChange}
         />
         <Form.Button color="color">Save</Form.Button>
