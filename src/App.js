@@ -5,6 +5,9 @@ import { Switch, Route } from 'react-router-dom';
 import UserProfile from "./components/UserProfile"
 import Navbar from "./components/Navbar"
 
+
+// this page allows us to click on the link and take us to the certain path
+//we give it the path and then the component we want it to go to
 function App() {
   return (
     <>  
@@ -12,7 +15,7 @@ function App() {
       <Container>
         <Switch>
           <Route exact path='/' render={() => <div>Home</div> }/>
-          <Route exact path="/user/profile" component={UserProfile}/>
+          <Route exact path="/user/profile" component={UserProfile}/> 
         </Switch>
       </Container>
     </>
