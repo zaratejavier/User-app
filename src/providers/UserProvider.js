@@ -1,7 +1,7 @@
 import React from "react"
 
 //this will set up the initial context
-const UserContext = React.createContext();
+ export const UserContext = React.createContext();
 
 //this will create an exportable consumer that can be used in other components
 export const UserConsumer = UserContext.Consumer;
@@ -12,8 +12,8 @@ class UserProvider extends React.Component {
     firstName: "Javier",
     lastName:"Zarate", 
     position:"Software Developer", 
-    company:"Adobe",
     experience:"Junior",
+    company:"Adobe",
     updateUser: (user) => this.updateUser(user)
   }
 

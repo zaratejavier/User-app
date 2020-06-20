@@ -7,8 +7,8 @@ class UserForm extends React.Component{
     firstName: this.props.firstName, 
     lastName: this.props.lastName, 
     position: this.props.position, 
-    company: this.props.company, 
     experience:this.props.experience,
+    company: this.props.company,
   }
 
   handleChange = (e, {name, value}) => {
@@ -73,8 +73,6 @@ class UserForm extends React.Component{
   }
 }
 
-
-
 const ConntectedUserForm = (props) => {
   return(
     <UserConsumer>
@@ -84,8 +82,8 @@ const ConntectedUserForm = (props) => {
           firstName={value.firstName}
           lastName={value.lastName}
           position={value.position}
-          company={value.company}
           experience={value.experience}
+          company={value.company}
           updateUser={value.updateUser}
         />
       )}
